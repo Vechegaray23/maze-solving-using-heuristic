@@ -1,0 +1,30 @@
+entrada=None
+salida=None
+
+maze = [
+    [1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1],
+    [0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 0],
+    [1, 0, 0, 0, 1]
+]
+
+#busco entrada
+contador=0
+for row in maze:
+    if row[0]==0:
+        entrada=contador
+    contador+=1
+#busco salida
+contador=0
+for row in maze:
+    if row[-1]==0:
+        salida=contador
+    contador+=1
+
+
+entrada=(0, entrada)
+salida=(-1, salida)
+print("Resultados:")
+print(entrada)
+print(salida)
